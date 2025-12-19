@@ -1,0 +1,13 @@
+127.0.0.1 - - [19/Dec/2025 02:57:52] "POST /api/solve HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 02:57:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 02:57:55] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 02:57:55] "GET /static/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 02:57:55] code 404, message File not found
+127.0.0.1 - - [19/Dec/2025 02:57:55] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [19/Dec/2025 02:58:55] "POST /api/solve HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 02:59:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 02:59:01] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 02:59:01] "GET /static/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 03:16:40] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 03:16:40] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Dec/2025 03:16:40] "GET /static/app.js HTTP/1.1" 200 -

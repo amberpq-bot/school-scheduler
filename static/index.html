@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Scheduler Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>School Scheduler Agent</h1>
+            <p>Automated Timetable Generation with OR-Tools</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" onclick="switchTab('teachers')">Teachers</button>
+            <button class="tab-btn" onclick="switchTab('rooms')">Rooms</button>
+            <button class="tab-btn" onclick="switchTab('classes')">Classes</button>
+            <button class="tab-btn" onclick="switchTab('schedule')">Schedule</button>
+        </nav>
+
+        <main>
+            <!-- Teachers Tab -->
+            <section id="teachers-tab" class="tab-content active">
+                <h2>Manage Teachers</h2>
+                <div class="input-group">
+                    <input type="text" id="teacher-name" placeholder="Teacher Name">
+                    <input type="text" id="teacher-subjects" placeholder="Subjects (comma separated)">
+                    <button onclick="addTeacher()">Add Teacher</button>
+                </div>
+                <ul id="teacher-list" class="item-list"></ul>
+            </section>
+
+            <!-- Rooms Tab -->
+            <section id="rooms-tab" class="tab-content">
+                <h2>Manage Rooms</h2>
+                <div class="input-group">
+                    <input type="text" id="room-name" placeholder="Room Name">
+                    <input type="number" id="room-capacity" placeholder="Capacity" value="30">
+                    <button onclick="addRoom()">Add Room</button>
+                </div>
+                <ul id="room-list" class="item-list"></ul>
+            </section>
+
+            <!-- Classes Tab -->
+            <section id="classes-tab" class="tab-content">
+                <h2>Manage Classes</h2>
+                <div class="input-group">
+                    <input type="text" id="class-name" placeholder="Class Name (e.g. Math 101)">
+                    <input type="text" id="class-subject" placeholder="Subject">
+                    <input type="number" id="class-sessions" placeholder="Sessions/Week" value="3">
+                    <select id="class-teacher">
+                        <option value="">Any Qualified Teacher</option>
+                    </select>
+                    <button onclick="addClass()">Add Class</button>
+                </div>
+                <ul id="class-list" class="item-list"></ul>
+            </section>
+
+            <!-- Schedule Tab -->
+            <section id="schedule-tab" class="tab-content">
+                <div class="schedule-controls">
+                    <button class="primary-btn" onclick="generateSchedule()">Generate Schedule</button>
+                    <span id="status-display"></span>
+                </div>
+                <div id="schedule-grid" class="schedule-grid"></div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
